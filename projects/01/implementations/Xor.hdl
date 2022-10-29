@@ -8,21 +8,14 @@
  * out = not (a == b)
  */
 
-/**
-!a && b == true;
-a && !b == true;
-a && b == false;
-!a & !b == false;0
- */
 CHIP Xor {
     IN a, b;
     OUT out;
 
     PARTS:
-    Not(in=a, out=noA); // a is falsy !a
-    Not(in=b, out=noB); // b is falsy !b
-    And(a=a, b=noB, out=aNoB); // a true b false = a and no b
-    And(a=noA, b=b, out=bNoA); // a is false   , b is true;
+    Not(in=a, out=noA); 
+    Not(in=b, out=noB);
+    And(a=a, b=noB, out=aNoB);
+    And(a=noA, b=b, out=bNoA);
     Or(a=aNoB, b=bNoA, out=out);
-    // Put your code here:
 }
