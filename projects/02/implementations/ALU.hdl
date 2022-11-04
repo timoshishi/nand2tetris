@@ -42,6 +42,25 @@ CHIP ALU {
         ng; // 1 if (out < 0),  0 otherwise
 
     PARTS:
+    // Pipe X value
+    Mux16(a=x, b=false, sel=zx, out=zxVal);        
+    Not16(in=zxVal, out=negNxVal);
+    Mux16(a=zxVal, b=negNxVal, sel=nx, out=xVal);  
     
-   // Put you code here:
+    // Pipe Y value
+    Mux16(a=y, b=false, sel=zy, out=zyVal);        
+    Not16(in=zyVal, out=negYVal);
+    Mux16(a=zyVal, b=negYVal, sel=ny, out=yVal);   
+    
+    // Possible function outputs
+    Add16(a=xVal, b=yVal, out=addXy);
+    And16(a=xVal, b=yVal, out=andXy);
+
+    // Function output values
+    Mux16(a=andXy, b=addXy, sel=f, out=functionOut);
+    Not16(in=functionOut, out=negFunctionOut);
+    // ALU output
+    Mux16(a=functionOut, b=negFunctionOut, sel=no, out=out);
+    // Or16(a=fOut, b=false, out=out);
+
 }
