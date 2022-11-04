@@ -4,6 +4,10 @@
 
 ### Getting Started
 
+[Official Website](https://www.nand2tetris.org/)
+
+[Coursera Link](https://www.coursera.org/learn/build-a-computer)
+
 #### Pre-requisites
 
 - Java
@@ -36,7 +40,6 @@
 
 [Lecture Slides](./course-materials/slides/01-lecture-slides.pdf)
 
-
 - Building basic chips for boolean logic
 
 
@@ -55,7 +58,6 @@
 - [x] Mux8Way16
 - [x] DMux4Way
 - [x] DMux8Way
-
 
 ### Lesson 2: Boolean Arithmetic
 
