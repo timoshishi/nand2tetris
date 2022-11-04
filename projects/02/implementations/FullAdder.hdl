@@ -13,9 +13,10 @@ CHIP FullAdder {
         carry;
 
     PARTS:
-    
     HalfAdder(a=a, b=b, sum=sumab, carry=carryab);
+    // if ab !c then sum
     HalfAdder(a=sumab, b=c, sum=sum, carry=carryabc);
+    // if ab or ac carry, then carry through
     Or(a=carryab, b=carryabc, out=carry);
 
 }
