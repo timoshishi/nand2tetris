@@ -4,6 +4,10 @@
 
 ### Getting Started
 
+[Official Website](https://www.nand2tetris.org/)
+
+[Free Coursera lecture series](https://www.coursera.org/learn/build-a-computer)
+
 #### Pre-requisites
 
 - Java
@@ -36,9 +40,7 @@
 
 [Lecture Slides](./course-materials/slides/01-lecture-slides.pdf)
 
-
 - Building basic chips for boolean logic
-
 
 - [x] Not
 - [x] And
@@ -56,11 +58,18 @@
 - [x] DMux4Way
 - [x] DMux8Way
 
-
-### Lesson 2: Boolean Arithmetic
+### Lesson 2: Boolean Arithmetic and the ALU
 
 [Project Overview](https://www.nand2tetris.org/project02)
 
-[Chapter 2: Boolean Arithmetic](./course-materials/book/02-Boolean-Arithmetic.pdf)
+[Chapter 2: Boolean Arithmetic and the ALU](./course-materials/book/02-Boolean-Arithmetic.pdf)
 
 [Lecture Slides](./course-materials/slides/02-lecture-slides.pdf)
+
+- Building chips for boolean arithmetic
+
+- [x] HalfAdder
+- [x] FullAdder
+- [x] Add16
+- [x] Inc16
+- [x] ALU
