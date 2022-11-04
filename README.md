@@ -42,7 +42,6 @@
 
 - Building basic chips for boolean logic
 
-
 - [x] Not
 - [x] And
 - [x] Or
@@ -66,3 +65,11 @@
 [Chapter 2: Boolean Arithmetic and the ALU](./course-materials/book/02-Boolean-Arithmetic.pdf)
 
 [Lecture Slides](./course-materials/slides/02-lecture-slides.pdf)
+
+- Building chips for boolean arithmetic
+
+- [x] HalfAdder
+- [x] FullAdder
+- [x] Add16
+- [x] Inc16
+- [x] ALU
