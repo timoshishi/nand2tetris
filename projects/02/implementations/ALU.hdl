@@ -52,15 +52,23 @@ CHIP ALU {
     Not16(in=zyVal, out=negYVal);
     Mux16(a=zyVal, b=negYVal, sel=ny, out=yVal);   
     
-    // Possible function outputs
+    // Possible function inputs computed
     Add16(a=xVal, b=yVal, out=addXy);
     And16(a=xVal, b=yVal, out=andXy);
 
-    // Function output values
+    // Possible function outputs computed
     Mux16(a=andXy, b=addXy, sel=f, out=functionOut);
     Not16(in=functionOut, out=negFunctionOut);
-    // ALU output
-    Mux16(a=functionOut, b=negFunctionOut, sel=no, out=out);
-    // Or16(a=fOut, b=false, out=out);
 
+    // ALU function output result
+    Mux16(a=functionOut, b=negFunctionOut, sel=no, out=fout); // rename var for later use
+    Mux16(a=fout, b=false, sel=false, out=out);
+
+    // Return value is all zeroes
+    Or16Way(in=fout, out=isNonZero); // Custom chip -> takes 16, returns true if any exist
+    Xor(a=isNonZero, b=true, out=zr);
+
+    // Return value is negative
+    Neg16(in=fout, out=isNegative); // Custom chip -> takes 16, returns negative if final bit exists
+    Xor(a=isNegative, b=false, out=ng);
 }
