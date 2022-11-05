@@ -32,7 +32,11 @@
 
 3. Click the `Test Script` button
 
-### Lesson 1: Boolean Logic
+
+#### Youtube software tutorial list
+
+[Tutorials](https://www.nand2tetris.org/demos)
+### Week 1: Boolean Logic
 
 [Project Overview](https://www.nand2tetris.org/project01)
 
@@ -58,7 +62,7 @@
 - [x] DMux4Way
 - [x] DMux8Way
 
-### Lesson 2: Boolean Arithmetic and the ALU
+### Week 2: Boolean Arithmetic and the ALU
 
 [Project Overview](https://www.nand2tetris.org/project02)
 
@@ -73,3 +77,24 @@
 - [x] Add16
 - [x] Inc16
 - [x] ALU
+
+### Week 3: Sequential Logic
+
+[Project Overview](https://www.nand2tetris.org/project03)
+
+[Chapter 3: Sequential Logic](./course-materials/book/03-Sequential-Logic.pdf)
+
+[Lecture Slides](./course-materials/slides/03-lecture-slides.pdf)
+
+- Building chips for sequential logic
+
+#### a
+
+- [x] Bit
+- [x] Register
+- [x] RAM8
+- [x] RAM64
+- [x] RAM512
+- [x] RAM4K
+- [x] RAM16K
+- [x] PC
