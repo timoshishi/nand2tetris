@@ -88,16 +88,13 @@
 
 - Building chips for sequential logic
 
-#### a.
+#### a
 
 - [x] Bit
 - [x] Register
 - [x] RAM8
 - [x] RAM64
-- [ ] PC
-
-#### b.
-
+- [x] RAM512
 - [x] RAM4K
 - [x] RAM16K
-- [x] RAM512
+- [x] PC
