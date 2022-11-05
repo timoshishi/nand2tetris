@@ -15,14 +15,11 @@ CHIP PC {
     IN in[16],load,inc,reset;
     OUT out[16];
     PARTS:
-    Inc16(in=in, out=added);
-    Mux16(a=in, b=added, sel=inc, out=incremented);
-    Mux16(a=incremented, b=in, sel=load, out=loaded);
-    Mux16(a=loaded, b=false, sel=reset, out=resetted);
-    Mux16(a=incremented,b=resetted, sel=inc, out=incOrReset);
-    Or16(a=registered, b=false, out=out);
-    // reset takes precendence over load
-    // load takes precedence of increement
-    // increment takes precenedence over regular out.
-    // regular out will output in.
+    
+    Inc16(in=registerOut, out=incedRegister); // create an inced bus
+    Mux16(a=registerOut, b=incedRegister, sel=inc, out=incedOut); // if not inced,  continue
+    Mux16(a=incedOut, b=in, sel=load, out=loadedOut); // continue inced if not load
+    Mux16(a=loadedOut, b=false, sel=reset, out=zeroedOut); // always return zero
+    Register(in=zeroedOut, load=true, out=registerOut, out=out); // circular out always load piped output
+
 }

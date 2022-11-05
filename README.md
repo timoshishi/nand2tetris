@@ -32,6 +32,10 @@
 
 3. Click the `Test Script` button
 
+
+#### Youtube software tutorial list
+
+[Tutorials](https://www.nand2tetris.org/demos)
 ### Week 1: Boolean Logic
 
 [Project Overview](https://www.nand2tetris.org/project01)
@@ -86,14 +90,14 @@
 
 #### a.
 
-- [ ] Bit
+- [x] Bit
+- [x] Register
+- [x] RAM8
+- [x] RAM64
 - [ ] PC
-- [ ] RAM8
-- [ ] RAM64
-- [ ] Register
 
 #### b.
 
-- [ ] RAM4K
-- [ ] RAM16K
-- [ ] RAM512
+- [x] RAM4K
+- [x] RAM16K
+- [x] RAM512
