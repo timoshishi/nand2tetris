@@ -42,7 +42,7 @@
 
 [Chapter 1: Boolean Logic](./course-materials/book/01-Boolean-Logic.pdf)
 
-[Lecture Slides](./course-materials/slides/01-lecture-slides.pdf)
+[Lecture Slides](./course-materials/slides/01-lecture.pdf)
 
 - Building basic chips for boolean logic
 
@@ -68,7 +68,7 @@
 
 [Chapter 2: Boolean Arithmetic and the ALU](./course-materials/book/02-Boolean-Arithmetic.pdf)
 
-[Lecture Slides](./course-materials/slides/02-lecture-slides.pdf)
+[Lecture Slides](./course-materials/slides/02-lecture.pdf)
 
 - Building chips for boolean arithmetic
 
@@ -84,7 +84,7 @@
 
 [Chapter 3: Sequential Logic](./course-materials/book/03-Sequential-Logic.pdf)
 
-[Lecture Slides](./course-materials/slides/03-lecture-slides.pdf)
+[Lecture Slides](./course-materials/slides/03-lecture.pdf)
 
 - Building chips for sequential logic
 
@@ -98,3 +98,17 @@
 - [x] RAM4K
 - [x] RAM16K
 - [x] PC
+  
+
+### Week 4: Machine Language Programming
+
+[Project Overview](https://www.nand2tetris.org/project04)
+
+[Chapter 4: Machine Language Programming](./course-materials/book/04-machine-language.pdf)
+
+[Lecture Slides](./course-materials/slides/04-lecture.pdf)
+
+- Building a computer that can run programs written in machine language
+
+- [ ] Mult
+- [ ] Fill
