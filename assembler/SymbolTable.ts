@@ -1,7 +1,5 @@
-type Sym = string;
-type Address = number;
-type Symbols = { [key: Sym]: Address };
-
+import { Symbols } from './types';
+import { SYMBOLS } from './constants';
 export class SymbolTable {
   symbols: Symbols;
   nextAvailableAddress: number;
@@ -12,7 +10,7 @@ export class SymbolTable {
   }
 
   addEntry(key: string, address: number) {
-    this.symbols[key] = address;
+    this.symbols[key] = this.nextAvailableAddress;
     this.nextAvailableAddress = 1 + this.nextAvailableAddress;
   }
 
@@ -30,20 +28,9 @@ export class SymbolTable {
       acc[`R${i}`] = i;
       return acc;
     }, {});
-    const table = {
-      SCREEN: 16384,
-      KBD: 24576,
-      SP: 0,
-      LCL: 1,
-      ARG: 2,
-      THIS: 3,
-      THAT: 4,
-      LOOP: 4,
-      STOP: 18,
-      i: 16,
-      sum: 17,
+    return {
+      ...SYMBOLS,
       ...registers,
     };
-    return table;
   }
 }

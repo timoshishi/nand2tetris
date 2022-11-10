@@ -1,16 +1,15 @@
-import { Binary, Code, COMPUTATIONS } from './Code';
+import { Code } from './Code';
 import { SymbolTable } from './SymbolTable';
+import { AsmLine, Binary, Instruction } from './types';
 
-export type AsmLine = string;
-
-export type Instruction = 'A_INSTRUCTION' | 'C_INSTRUCTION' | 'L_INSTRUCTION';
+//FIXME: Shame!
 
 export class Parser {
   asmLines: AsmLine[];
   symbolTable: SymbolTable;
   codeCompute: Code;
-  constructor(asmLines: AsmLine[], symbolTable: SymbolTable, codeCompute: Code) {
-    this.asmLines = asmLines;
+  constructor(symbolTable: SymbolTable, codeCompute: Code) {
+    this.asmLines = [];
     this.symbolTable = symbolTable;
     this.codeCompute = codeCompute;
   }
@@ -28,9 +27,9 @@ export class Parser {
         i++;
       }
     }
-    console.log(lines, lines.length);
     this.asmLines = lines;
   }
+
   getInstructionType(line: AsmLine): Instruction {
     const stripped = line.replace('@', '');
     if (!isNaN(+stripped) || this.symbolTable.contains(stripped)) {
@@ -58,20 +57,3 @@ export class Parser {
     throw new Error(`Not valid line: ${line}, Stripped: ${stripped}`);
   }
 }
-
-type Sym = string;
-export type Address = number;
-
-// is label (XXXX)
-// remove labels first and put them to the symbols as the next line in the program, splice
-// is variable @Xxx
-// if not in symbols, assign it to addresses starting at 16
-
-// A instruction char at 0 = 0
-// then 1-15 => binary
-
-// C Instruction
-// first three chars are 1, can just check char at 1
-// 111a cccc cc then if a===1, check table for values of c against the value of a
-// 111a cccc ccdd d // if ddd has value, then has a destination
-// 111a cccc ccdd djjj // if jjj has value then there is a jump
