@@ -32,10 +32,10 @@
 
 3. Click the `Test Script` button
 
-
 #### Youtube software tutorial list
 
 [Tutorials](https://www.nand2tetris.org/demos)
+
 ### Week 1: Boolean Logic
 
 [Project Overview](https://www.nand2tetris.org/project01)
@@ -98,7 +98,6 @@
 - [x] RAM4K
 - [x] RAM16K
 - [x] PC
-  
 
 ### Week 4: Machine Language Programming
 
@@ -137,4 +136,4 @@
 
 - Building an assembler that translates programs written in the Hack assembly language into binary machine code
 
-- [ ] Assembler
+- [x] Assembler
