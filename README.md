@@ -32,10 +32,10 @@
 
 3. Click the `Test Script` button
 
-
 #### Youtube software tutorial list
 
 [Tutorials](https://www.nand2tetris.org/demos)
+
 ### Week 1: Boolean Logic
 
 [Project Overview](https://www.nand2tetris.org/project01)
@@ -98,7 +98,6 @@
 - [x] RAM4K
 - [x] RAM16K
 - [x] PC
-  
 
 ### Week 4: Machine Language Programming
 
@@ -110,5 +109,31 @@
 
 - Building a computer that can run programs written in machine language
 
-- [ ] Mult
-- [ ] Fill
+- [x] Mult
+- [x] Fill
+
+### Week 5: Computer Architecture
+
+[Project Overview](https://www.nand2tetris.org/project05)
+
+[Chapter 5: Computer Architecture](./course-materials/book/05-computer-architecture.pdf)
+
+[Lecture Slides](./course-materials/slides/05-lecture.pdf)
+
+- Building a computer that can run programs written in the Hack assembly language
+
+- [x] CPU
+- [x] Memory
+- [x] Computer
+
+### Week 6: Assembler
+
+[Project Overview](https://www.nand2tetris.org/project06)
+
+[Chapter 6: Assembler](./course-materials/book/06-assembler.pdf)
+
+[Lecture Slides](./course-materials/slides/06-lecture.pdf)
+
+- Building an assembler that translates programs written in the Hack assembly language into binary machine code
+
+- [x] Assembler
